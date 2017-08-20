@@ -4,6 +4,9 @@
 # Use new container based environment
 sudo: false
 
+#use Trusty linux version
+dist: precise
+
 # Declare project language.
 # @link http://about.travis-ci.org/docs/user/languages/php/
 language: php
@@ -14,14 +17,10 @@ matrix:
     fast_finish: true
 
     include:
-        # Current $required_php_version for WordPress: 5.2.4
-        # aliased to 5.2.17
-        - php: '5.2'
-        # aliased to a recent 5.4.x version
-        - php: '5.4'
         # aliased to a recent 5.6.x version
         - php: '5.6'
           env: SNIFF=1
+        # recommended php version for WordPress: 7
         # aliased to a recent 7.x version
         - php: '7.0'
         # aliased to a recent hhvm version
@@ -29,6 +28,7 @@ matrix:
 
     allow_failures:
         - php: 'hhvm'
+        - php: '7.0'
 
 before_script:
   - export PHPCS_DIR=/tmp/phpcs
