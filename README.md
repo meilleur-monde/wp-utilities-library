@@ -1,5 +1,9 @@
 Better World Utilities Library
 ==============================
+[![Build Status][travis-image]][travis-url]
+
+[travis-image]: https://img.shields.io/travis/meilleur-monde/wp-quotes-widget.svg
+[travis-url]: https://travis-ci.org/meilleur-monde/wp-quotes-widget
 
 Utilities Library Plugin for [WordPress](https://wordpress.org/) adds some useful functions
 
